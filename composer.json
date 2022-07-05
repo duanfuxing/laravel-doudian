@@ -1,5 +1,5 @@
 {
-    "name": "abbotton/laravel-doudian",
+    "name": "duan617/laravel-doudian",
     "description": "抖音小店开放平台SDK",
     "keywords": [
         "abbotton",
@@ -10,19 +10,18 @@
         "抖店",
         "jinritemai"
     ],
-    "homepage": "https://github.com/abbotton/laravel-doudian",
+    "homepage": "https://github.com/duanfuxing/laravel-doudian",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "Abbotton",
-            "email": "uctoo@foxmail.com",
-            "role": "Developer"
+            "name": "duan617",
+            "email": "1243702438@qq.com"
         }
     ],
     "require": {
         "php": ">=7.2",
-        "guzzlehttp/guzzle": ">=6.5",
+        "guzzlehttp/guzzle": "7.*",
         "illuminate/support": ">=6.0"
     },
     "require-dev": {
