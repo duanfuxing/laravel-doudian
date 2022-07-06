@@ -1,8 +1,8 @@
 <?php
 
-namespace Abbotton\DouDian\Tests;
+namespace duan617\DouDian\Tests;
 
-use Abbotton\DouDian\DouDianServiceProvider;
+use duan617\DouDian\DouDianServiceProvider;
 use Illuminate\Support\Facades\Cache;
 use Mockery;
 use Orchestra\Testbench\TestCase as BaseTestCase;

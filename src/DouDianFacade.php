@@ -1,6 +1,6 @@
 <?php
 
-namespace Abbotton\DouDian;
+namespace duan617\DouDian;
 
 use Illuminate\Support\Facades\Facade;
 

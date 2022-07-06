@@ -1,6 +1,6 @@
 <?php
 
-namespace Abbotton\DouDian\Api;
+namespace duan617\DouDian\Api;
 
 use GuzzleHttp\Client;
 use Illuminate\Http\Client\RequestException;

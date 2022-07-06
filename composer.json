@@ -29,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Abbotton\\DouDian\\": "src"
+            "duan617\\DouDian\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Abbotton\\DouDian\\Tests\\": "tests"
+            "duan617\\DouDian\\Tests\\": "tests"
         }
     },
     "config": {
@@ -43,7 +43,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Abbotton\\DouDian\\DouDianServiceProvider"
+                "duan617\\DouDian\\DouDianServiceProvider"
             ],
             "aliases": {
                 "DouDian": "Abbotton\\DouDian\\DouDianFacade"

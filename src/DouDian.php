@@ -1,36 +1,36 @@
 <?php
 
-namespace Abbotton\DouDian;
+namespace duan617\DouDian;
 
-use Abbotton\DouDian\Api\AfterSale;
-use Abbotton\DouDian\Api\Alliance;
-use Abbotton\DouDian\Api\AntiSpam;
-use Abbotton\DouDian\Api\Bats;
-use Abbotton\DouDian\Api\Brand;
-use Abbotton\DouDian\Api\BuyIn;
-use Abbotton\DouDian\Api\Coupons;
-use Abbotton\DouDian\Api\CrossBorder;
-use Abbotton\DouDian\Api\DutyFree;
-use Abbotton\DouDian\Api\FreightTemplate;
-use Abbotton\DouDian\Api\Iop;
-use Abbotton\DouDian\Api\Logistics;
-use Abbotton\DouDian\Api\Material;
-use Abbotton\DouDian\Api\Member;
-use Abbotton\DouDian\Api\OpenCloud;
-use Abbotton\DouDian\Api\Order;
-use Abbotton\DouDian\Api\OrderCode;
-use Abbotton\DouDian\Api\Product;
-use Abbotton\DouDian\Api\Recycle;
-use Abbotton\DouDian\Api\Security;
-use Abbotton\DouDian\Api\Shop;
-use Abbotton\DouDian\Api\Sms;
-use Abbotton\DouDian\Api\Spu;
-use Abbotton\DouDian\Api\Storage;
-use Abbotton\DouDian\Api\SupplyChain;
-use Abbotton\DouDian\Api\Token;
-use Abbotton\DouDian\Api\Topup;
-use Abbotton\DouDian\Api\WareHouse;
-use Abbotton\DouDian\Api\Yunc;
+use duan617\DouDian\Api\AfterSale;
+use duan617\DouDian\Api\Alliance;
+use duan617\DouDian\Api\AntiSpam;
+use duan617\DouDian\Api\Bats;
+use duan617\DouDian\Api\Brand;
+use duan617\DouDian\Api\BuyIn;
+use duan617\DouDian\Api\Coupons;
+use duan617\DouDian\Api\CrossBorder;
+use duan617\DouDian\Api\DutyFree;
+use duan617\DouDian\Api\FreightTemplate;
+use duan617\DouDian\Api\Iop;
+use duan617\DouDian\Api\Logistics;
+use duan617\DouDian\Api\Material;
+use duan617\DouDian\Api\Member;
+use duan617\DouDian\Api\OpenCloud;
+use duan617\DouDian\Api\Order;
+use duan617\DouDian\Api\OrderCode;
+use duan617\DouDian\Api\Product;
+use duan617\DouDian\Api\Recycle;
+use duan617\DouDian\Api\Security;
+use duan617\DouDian\Api\Shop;
+use duan617\DouDian\Api\Sms;
+use duan617\DouDian\Api\Spu;
+use duan617\DouDian\Api\Storage;
+use duan617\DouDian\Api\SupplyChain;
+use duan617\DouDian\Api\Token;
+use duan617\DouDian\Api\Topup;
+use duan617\DouDian\Api\WareHouse;
+use duan617\DouDian\Api\Yunc;
 use Exception;
 use Illuminate\Support\Str;
 
@@ -79,7 +79,7 @@ class DouDian
 
     public function __get($class)
     {
-        $class = '\\Abbotton\\DouDian\\Api\\'.Str::ucfirst($class);
+        $class = '\\duan617\\DouDian\\Api\\'.Str::ucfirst($class);
         if (! class_exists($class)) {
             throw new Exception($class.', Not found', 404);
         }
