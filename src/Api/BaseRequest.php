@@ -182,7 +182,7 @@ class BaseRequest
         $response['data']['access_token_expired_at'] = time() + $response['data']['expires_in'];
         $response['data']['refresh_token_expired_at'] = strtotime('+14 day');
 
-        Cache::add(self::OAUTH_CACHE_KEY . $this->shop_id, $response['data'],OAUTH_CACHE_EXPIRED);
+        Cache::add(self::OAUTH_CACHE_KEY . $this->shop_id, $response['data'],self::OAUTH_CACHE_EXPIRED);
 
         return $response['data']['access_token'];
     }
@@ -213,7 +213,7 @@ class BaseRequest
         $response['data']['access_token_expired_at'] = time() + $response['data']['expires_in'];
         $response['data']['refresh_token_expired_at'] = strtotime('+14 day');
 
-        Cache::add(self::OAUTH_CACHE_KEY . $this->shop_id, $response['data'],OAUTH_CACHE_EXPIRED);
+        Cache::add(self::OAUTH_CACHE_KEY . $this->shop_id, $response['data'],self::OAUTH_CACHE_EXPIRED);
 
         return $response['data']['access_token'];
     }

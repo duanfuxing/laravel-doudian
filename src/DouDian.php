@@ -90,11 +90,11 @@ class DouDian
     /**
      * 设定店铺ID.
      *
-     * @param int $shopId
+     * @param $shopId
      *
      * @return $this
      */
-    public function setShopId(int $shopId): self
+    public function setShopId($shopId): self
     {
         $this->shop_id = $shopId;
 
