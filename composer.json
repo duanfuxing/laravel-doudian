@@ -46,7 +46,7 @@
                 "duan617\\DouDian\\DouDianServiceProvider"
             ],
             "aliases": {
-                "DouDian": "Abbotton\\DouDian\\DouDianFacade"
+                "DouDian": "duan617\\DouDian\\DouDianFacade"
             }
         }
     }
