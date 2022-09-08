@@ -39,6 +39,10 @@ class BaseRequest
         if (!isset($config['app_secret']) || !$config['app_secret']) {
             throw new \InvalidArgumentException('配置有误, 请填写app_secret');
         }
+
+        if (!isset($config['oauth_cache_expire']) || !$config['oauth_cache_expire']) {
+            throw new \InvalidArgumentException('配置有误, 请填写oauth_cache_expire');
+        }
         $this->client = new Client();
     }
 
@@ -182,7 +186,7 @@ class BaseRequest
         $response['data']['access_token_expired_at'] = time() + $response['data']['expires_in'];
         $response['data']['refresh_token_expired_at'] = strtotime('+14 day');
 
-        Cache::add(self::OAUTH_CACHE_KEY . $this->shop_id, $response['data'],self::OAUTH_CACHE_EXPIRED);
+        Cache::add(self::OAUTH_CACHE_KEY . $this->shop_id, $response['data'], $this->config['oauth_cache_expire']);
 
         return $response['data']['access_token'];
     }
@@ -213,7 +217,7 @@ class BaseRequest
         $response['data']['access_token_expired_at'] = time() + $response['data']['expires_in'];
         $response['data']['refresh_token_expired_at'] = strtotime('+14 day');
 
-        Cache::add(self::OAUTH_CACHE_KEY . $this->shop_id, $response['data'],self::OAUTH_CACHE_EXPIRED);
+        Cache::add(self::OAUTH_CACHE_KEY . $this->shop_id, $response['data'], $this->config['oauth_cache_expire']);
 
         return $response['data']['access_token'];
     }
